@@ -1,13 +1,13 @@
 var Discord = require("discord.js");
 module.exports = {
 	run: async function (bot, message, args) {
-		//if (!message.member.roles.has(this.settings.requiredRole)) return message.reply("You do not have permission to use this command!");
+		if (message.member.highestRole.position < message.guild.roles.get("437767667047333889").position) return message.reply("You do not have permission to use this command!");
 		if (this.settings.running) return message.reply("This bot is already dming all members of this server, please try again later.");
 		if (!args[0]) return message.reply(`You did not supply enough parameters. Usage: \`${this.settings.usage}\``);
 		var members = message.guild.members.array().filter((m) => !m.user.bot);
 		var announceEmbed = new Discord.RichEmbed()
-			.setColor("BLUE")
-			.setTitle("Message from Angelina")
+			.setColor("RED")
+			.setTitle("Event Notifier")
 			.setDescription(args.join(" "));
 		var i = 0;
 		await message.reply("\nYou are about to send a message that looks like the one below to ALL members\nType **CONFIRM** to confirm.\nType anything else to cancel.\nOnce started, this cannot be stopped.", {embed: announceEmbed});
