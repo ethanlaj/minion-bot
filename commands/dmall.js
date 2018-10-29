@@ -14,9 +14,8 @@ module.exports = {
 		});
 	},
 	settings: {
-		name: "announce",
-		usage: "-announce (announcement)",
-		announceChannel: "494553891145515028",
-		requiredRole: "503664784252600352",
+		name: "dmall",
+		usage: "-dmall (dm)",
+		requiredRole: "",
 	}
 };
