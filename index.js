@@ -46,13 +46,9 @@ fs.readdir("./commands/", (err, files) => {
 		}
 	}
 });
-bot.safeSend = function(message, name) {
-	return message.author.send(`You attempted to use the \`${name}\` command in ${message.channel.toString()}, but I cannot chat there.`);
-};
 bot.on("ready", async () => {
 	console.log(`${bot.user.tag} is online. ${bot.commands.enabledCommands.size}/${bot.commands.enabledCommands.size + bot.commands.disabledCommands.length} commands loaded successfully.`);
 	let loaders = bot.loaders.enabledLoaders;
-	console.log(bot.user.id);
 	for (let loader of loaders) {
 		if (loader.run != null) loader.run(bot);
 	}
