@@ -2,7 +2,7 @@ var Discord = require("discord.js");
 module.exports = {
 	run: async function (bot, message, args) {
 		if (message.guild.id !== "432981346265071616") return message.reply("This command is disabled in this guild!");
-		if (message.member.highestRole.position < message.guild.roles.get("437767667047333889").position) return message.reply("You do not have permission to use this command!");
+		if (message.member.highestRole.position < message.guild.roles.get("432996755932577798").position) return message.reply("You do not have permission to use this command!");
 		if (this.settings.running) return message.reply("This bot is already dming all members of this server, please try again later.");
 		if (!args[0]) return message.reply(`You did not supply enough parameters. Usage: \`${this.settings.usage}\``);
 		var members = message.guild.members.array().filter((m) => !m.user.bot);
