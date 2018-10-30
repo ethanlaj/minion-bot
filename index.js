@@ -52,6 +52,7 @@ bot.safeSend = function(message, name) {
 bot.on("ready", async () => {
 	console.log(`${bot.user.tag} is online. ${bot.commands.enabledCommands.size}/${bot.commands.enabledCommands.size + bot.commands.disabledCommands.length} commands loaded successfully.`);
 	let loaders = bot.loaders.enabledLoaders;
+	console.log(bot.user.id);
 	for (let loader of loaders) {
 		if (loader.run != null) loader.run(bot);
 	}
