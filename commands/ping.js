@@ -4,6 +4,6 @@ module.exports = {
 	},
 	settings: {
 		name: "ping",
-		usage: "-ping"
+		usage: "!ping"
 	}
 };
