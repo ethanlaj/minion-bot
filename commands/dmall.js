@@ -33,7 +33,6 @@ module.exports = {
 	settings: {
 		name: "dmall",
 		usage: "!dmall (dm)",
-		requiredRole: "",
 		running: false
 	}
 };
